@@ -159,7 +159,7 @@ int main(int argc, char* argv[]) {
 	pthread_t thread[THREAD_COUNT];
 	struct threadData thData[THREAD_COUNT];
 
-	fptr = fopen("result.txt", "w");
+	fptr = fopen("result.csv", "w");
 
 	/* Initialize the arrays */
 	cells = (float**) malloc(GRID_SIZE * sizeof(float*));
@@ -208,13 +208,12 @@ int main(int argc, char* argv[]) {
 		}
 		
 		// Printing
-		
+		// Uncomment this if you want to print the .csv
 		/*
 		if (k < 5) {
 			for (i = 0; i < 50; i++) {
-				fprintf(fptr, "|");
 				for (j = 0; j < 50; j++) {
-					fprintf(fptr, "%.4f|", cells[i][j]);
+					fprintf(fptr, "%.4f,", cells[i][j]);
 				}
 				fprintf(fptr, "\n");
 			}

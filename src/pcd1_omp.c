@@ -169,9 +169,8 @@ int main(int argc, char* argv[]) {
         }
 
 		// Printing
-		//printf("[PREV %d] ", countLivingCells(&cells));
-		//printf("[NEXT %d]\n", countLivingCells(&nextCells));
-		
+		// Uncomment this if you want to print the .csv
+		/*
 		if (k < 5) {
 			for (i = 0; i < 50; i++) {
 				for (j = 0; j < 50; j++) {
@@ -181,6 +180,7 @@ int main(int argc, char* argv[]) {
 			}
 			fprintf(fptr, "\n");
 		}
+		*/
 		
 		for (i = 0; i < GRID_SIZE; i++) {
 			for (j = 0; j < GRID_SIZE; j++) {
